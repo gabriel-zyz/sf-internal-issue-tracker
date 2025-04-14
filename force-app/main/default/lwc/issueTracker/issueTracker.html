@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Internal Issue Tracker" icon-name="standard:case">
+      <div class="slds-p-around_medium">
+        <lightning-input label="Title" value={name} onchange={handleNameChange}></lightning-input>
+        <lightning-textarea label="Description" value={description} onchange={handleDescriptionChange}></lightning-textarea>
+        <lightning-combobox
+          label="Status"
+          value={status}
+          options={statusOptions}
+          onchange={handleStatusChange}>
+        </lightning-combobox>
+        <lightning-combobox
+          label="Priority"
+          value={priority}
+          options={priorityOptions}
+          onchange={handlePriorityChange}>
+        </lightning-combobox>
+        <lightning-button label="Create Issue" onclick={createIssue} variant="brand" class="slds-m-top_medium"></lightning-button>
+      </div>
+    </lightning-card>
+  </template>
